@@ -1,6 +1,6 @@
-# project ns (3.27) configured on Sat Mar 24 01:30:10 2018 by
+# project ns (3.27) configured on Fri Mar 30 11:07:42 2018 by
 # waf 1.8.19 (abi 98, python 2070cf0 on linux2)
-# using ./waf configure
+# using ./waf --enable-examples --enable-tests configure
 #
 ----------------------------------------
 Setting top to
@@ -526,9 +526,9 @@ Checking for compilation flag -Wl,--soname=foo support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_c40589c24f6c29dfd3401d4103aedc65/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_6ec05647b5db91b33a554631960f784e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_c40589c24f6c29dfd3401d4103aedc65/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-Wl,--soname=foo', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6ec05647b5db91b33a554631960f784e/testbuild/test.cpp.1.o']
 ok
 ------------------------------------------------------
 Checking for program 'python'
@@ -599,69 +599,18 @@ LDVERSION = ''
 
 ------------------------------------------------------
 python-config
-not found
-find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/home/arnab/bin', '/home/arnab/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> None
-from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/bindings/python: Could not find the program ['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config']
+/usr/bin/python-config
+find program=['/usr/bin/python-config', 'python2.7-config', 'python-config-2.7', 'python2.7m-config'] paths=['/home/arnab/bin', '/home/arnab/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PYTHON_CONFIG' -> ['/usr/bin/python-config']
+------------------------------------------------------------------
+Asking python-config for pyembed '--cflags --libs --ldflags' flags
+['/usr/bin/python-config', '--cflags', '--libs', '--ldflags']
+out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
+-lpython2.7 -lpthread -ldl  -lutil -lm 
+-L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
 
-
-# try again with -L$python_LIBDIR: ['/usr/lib']
-
-------------------------------------------------------
-Checking for library python2.7 in LIBDIR
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_3ce906569aca38c80013ddbc8cebb85c/test.cpp[0m
-
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3ce906569aca38c80013ddbc8cebb85c/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_3ce906569aca38c80013ddbc8cebb85c/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3ce906569aca38c80013ddbc8cebb85c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
-err: /usr/bin/ld: cannot find -lpython2.7
-collect2: error: ld returned 1 exit status
-
-from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/bindings/python: Test does not build: Traceback (most recent call last):
-  File "/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
-    bld.compile()
-  File "/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Build.py", line 185, in compile
-    raise Errors.BuildError(self.producer.error)
-BuildError: Build failed
- -> task in 'testprog' failed (exit status 1): 
-	{task 140658528512336: cxxprogram test.cpp.1.o -> testprog}
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3ce906569aca38c80013ddbc8cebb85c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib', '-lpython2.7']
-
-not found
-from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/bindings/python: The configuration failed
-
-
-# try again with -L$python_LIBPL (some systems don't install the python library in $prefix/lib)
-
-------------------------------------------------------
-Checking for library python2.7 in python_LIBPL
-==>
-
-int main(int argc, char **argv) {
-	(void)argc; (void)argv;
-	return 0;
-}
-
-<==
-[1/2] Compiling [32mbuild/.conf_check_f73f6aba4ff827e1df045b7c3177367b/test.cpp[0m
-
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f73f6aba4ff827e1df045b7c3177367b/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f73f6aba4ff827e1df045b7c3177367b/testbuild/testprog[0m
-
-['/usr/bin/g++', '-Wl,-Bsymbolic-functions', '-Wl,-z,relro', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f73f6aba4ff827e1df045b7c3177367b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-lpython2.7']
 yes
-Include path for Python extensions (found via distutils module): '/usr/include/python2.7'
-
-------------------------------------------------------
-Checking for header Python.h
+------------------------------------------------------------------
+Testing pyembed configuration
 ==>
 
 #include <Python.h>
@@ -682,11 +631,122 @@ int main(int argc, char **argv)
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_35576fd194058eb70003fff6cb606254/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_a11768d5ec975eb0e09078167f2cc131/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_35576fd194058eb70003fff6cb606254/testbuild/test.cpp.1.o']
-err: ../test.cpp:2:20: fatal error: Python.h: No such file or directory
-compilation terminated.
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_a11768d5ec975eb0e09078167f2cc131/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_a11768d5ec975eb0e09078167f2cc131/testbuild/testprog[0m
+
+['/usr/bin/g++', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_a11768d5ec975eb0e09078167f2cc131/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
+yes
+------------------------------------------------------------------
+Asking python-config for pyext '--cflags --libs --ldflags' flags
+['/usr/bin/python-config', '--cflags', '--libs', '--ldflags']
+out: -I/usr/include/python2.7 -I/usr/include/x86_64-linux-gnu/python2.7  -fno-strict-aliasing -Wdate-time -D_FORTIFY_SOURCE=2 -g -fstack-protector-strong -Wformat -Werror=format-security  -DNDEBUG -g -fwrapv -O2 -Wall -Wstrict-prototypes
+-lpython2.7 -lpthread -ldl  -lutil -lm 
+-L/usr/lib/python2.7/config-x86_64-linux-gnu -L/usr/lib -lpython2.7 -lpthread -ldl  -lutil -lm  -Xlinker -export-dynamic -Wl,-O1 -Wl,-Bsymbolic-functions
+
+yes
+------------------------------------------------------------------
+Testing pyext configuration
+==>
+
+#include <Python.h>
+#ifdef __cplusplus
+extern "C" {
+#endif
+	void Py_Initialize(void);
+	void Py_Finalize(void);
+#ifdef __cplusplus
+}
+#endif
+int main(int argc, char **argv)
+{
+   (void)argc; (void)argv;
+   Py_Initialize();
+   Py_Finalize();
+   return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_41fd1e51ef501bb141d178d872e11a96/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fPIC', '-fno-strict-aliasing', '-fstack-protector-strong', '-fwrapv', '-I/usr/include/python2.7', '-I/usr/include/x86_64-linux-gnu/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-D_FORTIFY_SOURCE=2', '-DNDEBUG', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_41fd1e51ef501bb141d178d872e11a96/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_41fd1e51ef501bb141d178d872e11a96/testbuild/testprog.so[0m
+
+['/usr/bin/g++', '-shared', '-Xlinker', '-export-dynamic', '-Wl,-O1', '-Wl,-Bsymbolic-functions', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_41fd1e51ef501bb141d178d872e11a96/testbuild/testprog.so', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/lib/python2.7/config-x86_64-linux-gnu', '-L/usr/lib', '-lpython2.7', '-lpthread', '-ldl', '-lutil', '-lm']
+yes
+------------------------------------------------------------------
+Checking for compilation flag -fvisibility=hidden support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_6ec05647b5db91b33a554631960f784e/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fvisibility=hidden', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6ec05647b5db91b33a554631960f784e/testbuild/test.cpp.1.o']
+ok
+------------------------------------------------------------------
+Checking for compilation flag -Wno-array-bounds support
+==>
+int main() { return 0; }
+<==
+[1/1] Compiling [32mbuild/.conf_check_6ec05647b5db91b33a554631960f784e/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-array-bounds', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6ec05647b5db91b33a554631960f784e/testbuild/test.cpp.1.o']
+ok
+------------------------------------------------------------------
+Checking for pybindgen location
+../pybindgen-0.17.0.post58+ngcf00cc0 (guessed)
+------------------------------------------------------------------
+Checking for python module 'pybindgen'
+['/usr/bin/python', '-c', "\nimport pybindgen as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
+out: 0.17.0.post58+gcf00cc0
+
+0.17.0.post58+gcf00cc0
+------------------------------------------------------------------
+Checking for pybindgen version
+0.17.0.post58+gcf00cc0
+------------------------------------------------------------------
+Checking for code snippet
+==>
+
+#include <stdint.h>
+#include <vector>
+
+int main ()
+{
+   std::vector< uint64_t > t = std::vector< unsigned long > ();
+   return 0;
+}
+
+<==
+[1/1] Compiling [32mbuild/.conf_check_ddab293f09702f35cc963eb10f228db3/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_ddab293f09702f35cc963eb10f228db3/testbuild/test.cpp.1.o']
+yes
+------------------------------------------------------------------
+Checking for types uint64_t and unsigned long equivalence
+no
+------------------------------------------------------------------
+Checking for code snippet
+==>
+
+#include <stdint.h>
+#include <vector>
+
+int main ()
+{
+   std::vector< uint64_t > t = std::vector< unsigned long long > ();
+   return 0;
+}
+
+<==
+[1/1] Compiling [32mbuild/.conf_check_2fe38a669e6fdfd372be70ca912fc29b/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_2fe38a669e6fdfd372be70ca912fc29b/testbuild/test.cpp.1.o']
+err: ../test.cpp: In function ‘int main()’:
+../test.cpp:7:67: error: conversion from ‘std::vector<long long unsigned int>’ to non-scalar type ‘std::vector<long unsigned int>’ requested
+    std::vector< uint64_t > t = std::vector< unsigned long long > ();
+                                                                   ^
 
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/bindings/python: Test does not build: Traceback (most recent call last):
   File "/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/.waf-1.8.19-b1fc8f7baef51bd2db4c2971909a568d/waflib/Configure.py", line 335, in run_build
@@ -695,39 +755,73 @@ from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140658528511696: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-fno-strict-aliasing', '-fwrapv', '-fstack-protector-strong', '-fno-strict-aliasing', '-I/usr/include/python2.7', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DNDEBUG', '-D_FORTIFY_SOURCE=2', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_35576fd194058eb70003fff6cb606254/testbuild/test.cpp.1.o']
+	{task 139819209359184: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_2fe38a669e6fdfd372be70ca912fc29b/testbuild/test.cpp.1.o']
 
-Distutils not installed? Broken python installation? Get python-config now!
+no
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/bindings/python: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
+Checking for types uint64_t and unsigned long long equivalence
+yes
+------------------------------------------------------------------
+Checking for the apidefs that can be used for Python bindings
+gcc-LP64
+------------------------------------------------------------------
+Checking for internal GCC cxxabi
+==>
+
+# include <cxxabi.h>
+int main ()
+{
+   const abi::__si_class_type_info *_typeinfo  __attribute__((unused)) = NULL;
+   return 0;
+}
+
+<==
+[1/2] Compiling [32mbuild/.conf_check_ed4091cb2502a50796e5d7976c371721/test.cpp[0m
+
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DPYTHONDIR="/usr/local/lib/python2.7/dist-packages"', '-DPYTHONARCHDIR="/usr/local/lib/python2.7/dist-packages"', '-DHAVE_PYEMBED=1', '-DHAVE_PYEXT=1', '-DHAVE_PYTHON_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_ed4091cb2502a50796e5d7976c371721/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_ed4091cb2502a50796e5d7976c371721/testbuild/testprog[0m
+
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_ed4091cb2502a50796e5d7976c371721/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+complete
+------------------------------------------------------------------
+Checking for python module 'pygccxml'
+['/usr/bin/python', '-c', "\nimport pygccxml as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
+err: Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+ImportError: No module named pygccxml
+
+not found
+from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/bindings/python: Could not find the python module 'pygccxml'
+------------------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/src: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/src: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for click location
 not found
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for program 'pkg-config'
 /usr/bin/pkg-config
 find program=['pkg-config'] paths=['/home/arnab/bin', '/home/arnab/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='PKGCONFIG' -> ['/usr/bin/pkg-config']
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for 'gtk+-2.0' >= 2.12
 ['/usr/bin/pkg-config', '--atleast-version=2.12', 'gtk+-2.0']
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gtk+-2.0']
 out: -pthread -I/usr/include/gtk-2.0 -I/usr/lib/x86_64-linux-gnu/gtk-2.0/include -I/usr/include/gio-unix-2.0/ -I/usr/include/cairo -I/usr/include/pango-1.0 -I/usr/include/atk-1.0 -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/libpng12 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/libpng12 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/freetype2 -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype
 
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for 'libxml-2.0' >= 2.7
 ['/usr/bin/pkg-config', '--atleast-version=2.7', 'libxml-2.0']
 not found
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/src/config-store: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for type uint128_t
 ==>
 #include <stdint.h>
@@ -740,9 +834,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_93451216b0824d8b345713b6d8d2edf1/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_ff526a9a64b9753e7eee025eca21ca17/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_93451216b0824d8b345713b6d8d2edf1/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_ff526a9a64b9753e7eee025eca21ca17/testbuild/test.cpp.1.o']
 err: ../test.cpp: In function ‘int main(int, char**)’:
 ../test.cpp:5:7: error: ‘uint128_t’ was not declared in this scope
   if ((uint128_t *) 0) return 0;
@@ -764,12 +858,12 @@ from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140658528686608: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_93451216b0824d8b345713b6d8d2edf1/testbuild/test.cpp.1.o']
+	{task 139819209358032: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_ff526a9a64b9753e7eee025eca21ca17/testbuild/test.cpp.1.o']
 
 not found
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/src/core: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for type __uint128_t
 ==>
 #include <stdint.h>
@@ -782,17 +876,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_f1c3e84bbbbe572c5d2caec07f621874/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_0f6fd3de2a2dc545b5e43f3ba3fe7d4b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f1c3e84bbbbe572c5d2caec07f621874/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_f1c3e84bbbbe572c5d2caec07f621874/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_0f6fd3de2a2dc545b5e43f3ba3fe7d4b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_0f6fd3de2a2dc545b5e43f3ba3fe7d4b/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f1c3e84bbbbe572c5d2caec07f621874/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_0f6fd3de2a2dc545b5e43f3ba3fe7d4b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking high precision implementation
 128-bit integer (default)
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header stdint.h
 ==>
 #include <stdint.h>
@@ -803,14 +897,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_01de4c7d1cf1eb98ab7d90df4a07d20d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_23ff12f6d5dd4792bb1b9c49b95a4a97/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_01de4c7d1cf1eb98ab7d90df4a07d20d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_01de4c7d1cf1eb98ab7d90df4a07d20d/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_23ff12f6d5dd4792bb1b9c49b95a4a97/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_23ff12f6d5dd4792bb1b9c49b95a4a97/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_01de4c7d1cf1eb98ab7d90df4a07d20d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_23ff12f6d5dd4792bb1b9c49b95a4a97/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header inttypes.h
 ==>
 #include <inttypes.h>
@@ -821,14 +915,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_6a9c110ab354b2ead6423b0aa2396832/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_973f9a94063117ec76a52d36c4160284/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6a9c110ab354b2ead6423b0aa2396832/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_6a9c110ab354b2ead6423b0aa2396832/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_973f9a94063117ec76a52d36c4160284/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_973f9a94063117ec76a52d36c4160284/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6a9c110ab354b2ead6423b0aa2396832/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_973f9a94063117ec76a52d36c4160284/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header sys/inttypes.h
 ==>
 #include <sys/inttypes.h>
@@ -839,9 +933,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_170b94afaacfab193b408cef5a2a696b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6f6b72d9d39173bee455df51523b7d60/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_170b94afaacfab193b408cef5a2a696b/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6f6b72d9d39173bee455df51523b7d60/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
 compilation terminated.
 
@@ -852,12 +946,12 @@ from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140658528753488: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_170b94afaacfab193b408cef5a2a696b/testbuild/test.cpp.1.o']
+	{task 139819209603408: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6f6b72d9d39173bee455df51523b7d60/testbuild/test.cpp.1.o']
 
 not found
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/src/core: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header sys/types.h
 ==>
 #include <sys/types.h>
@@ -868,14 +962,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_0683ce037fc23796515ad401ab29f929/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f0b1645a30a833503b56dba2c91818e8/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_0683ce037fc23796515ad401ab29f929/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_0683ce037fc23796515ad401ab29f929/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f0b1645a30a833503b56dba2c91818e8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f0b1645a30a833503b56dba2c91818e8/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_0683ce037fc23796515ad401ab29f929/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f0b1645a30a833503b56dba2c91818e8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header sys/stat.h
 ==>
 #include <sys/stat.h>
@@ -886,14 +980,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_7016788c7f5c483a2774919cab9ed2fc/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_d7c77916e25bc52ea8ab83cdb9a5a9ca/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_7016788c7f5c483a2774919cab9ed2fc/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_7016788c7f5c483a2774919cab9ed2fc/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_d7c77916e25bc52ea8ab83cdb9a5a9ca/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_d7c77916e25bc52ea8ab83cdb9a5a9ca/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_7016788c7f5c483a2774919cab9ed2fc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_d7c77916e25bc52ea8ab83cdb9a5a9ca/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header dirent.h
 ==>
 #include <dirent.h>
@@ -904,14 +998,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_7b0dde456c152fdcebfc2a5244876443/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6271fb376002829c9ee18ff912827377/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_7b0dde456c152fdcebfc2a5244876443/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_7b0dde456c152fdcebfc2a5244876443/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6271fb376002829c9ee18ff912827377/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_6271fb376002829c9ee18ff912827377/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_7b0dde456c152fdcebfc2a5244876443/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6271fb376002829c9ee18ff912827377/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header stdlib.h
 ==>
 #include <stdlib.h>
@@ -922,14 +1016,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3cace3f4e83142111fc2d90d48dcdfd6/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_1a00e6885f3ac5706d616b3fc6ff1b3b/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3cace3f4e83142111fc2d90d48dcdfd6/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_3cace3f4e83142111fc2d90d48dcdfd6/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_1a00e6885f3ac5706d616b3fc6ff1b3b/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_1a00e6885f3ac5706d616b3fc6ff1b3b/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3cace3f4e83142111fc2d90d48dcdfd6/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_1a00e6885f3ac5706d616b3fc6ff1b3b/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header signal.h
 ==>
 #include <signal.h>
@@ -940,14 +1034,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_4c499cd0623b45d36a1b2609c81ab066/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_285a012ebd7cba753ebf6c193463cb44/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_4c499cd0623b45d36a1b2609c81ab066/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_4c499cd0623b45d36a1b2609c81ab066/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_285a012ebd7cba753ebf6c193463cb44/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_285a012ebd7cba753ebf6c193463cb44/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_4c499cd0623b45d36a1b2609c81ab066/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_285a012ebd7cba753ebf6c193463cb44/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header pthread.h
 ==>
 
@@ -960,14 +1054,14 @@ int main ()
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_6598240f2b159aea3bdd9049af4677bc/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_2b2959d82bb2d12dc059c28f0300f513/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6598240f2b159aea3bdd9049af4677bc/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_6598240f2b159aea3bdd9049af4677bc/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_2b2959d82bb2d12dc059c28f0300f513/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2b2959d82bb2d12dc059c28f0300f513/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6598240f2b159aea3bdd9049af4677bc/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_2b2959d82bb2d12dc059c28f0300f513/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header stdint.h
 ==>
 #include <stdint.h>
@@ -978,14 +1072,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_01de4c7d1cf1eb98ab7d90df4a07d20d/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_23ff12f6d5dd4792bb1b9c49b95a4a97/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_01de4c7d1cf1eb98ab7d90df4a07d20d/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_01de4c7d1cf1eb98ab7d90df4a07d20d/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_INTTYPES_H=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_23ff12f6d5dd4792bb1b9c49b95a4a97/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_23ff12f6d5dd4792bb1b9c49b95a4a97/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_01de4c7d1cf1eb98ab7d90df4a07d20d/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_23ff12f6d5dd4792bb1b9c49b95a4a97/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header inttypes.h
 ==>
 #include <inttypes.h>
@@ -996,14 +1090,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_6a9c110ab354b2ead6423b0aa2396832/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_973f9a94063117ec76a52d36c4160284/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6a9c110ab354b2ead6423b0aa2396832/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_6a9c110ab354b2ead6423b0aa2396832/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_973f9a94063117ec76a52d36c4160284/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_973f9a94063117ec76a52d36c4160284/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6a9c110ab354b2ead6423b0aa2396832/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_973f9a94063117ec76a52d36c4160284/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header sys/inttypes.h
 ==>
 #include <sys/inttypes.h>
@@ -1014,9 +1108,9 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_170b94afaacfab193b408cef5a2a696b/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_6f6b72d9d39173bee455df51523b7d60/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_170b94afaacfab193b408cef5a2a696b/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6f6b72d9d39173bee455df51523b7d60/testbuild/test.cpp.1.o']
 err: ../test.cpp:1:26: fatal error: sys/inttypes.h: No such file or directory
 compilation terminated.
 
@@ -1027,12 +1121,12 @@ from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-
     raise Errors.BuildError(self.producer.error)
 BuildError: Build failed
  -> task in 'testprog' failed (exit status 1): 
-	{task 140658528754768: cxx test.cpp -> test.cpp.1.o}
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_170b94afaacfab193b408cef5a2a696b/testbuild/test.cpp.1.o']
+	{task 139819209357904: cxx test.cpp -> test.cpp.1.o}
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6f6b72d9d39173bee455df51523b7d60/testbuild/test.cpp.1.o']
 
 not found
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/src/core: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for library rt
 ==>
 
@@ -1042,14 +1136,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_81ff1d4cd63ad84473c0e683a8e148ae/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_71ec7fb178b399c8352f3a2669fea54c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_81ff1d4cd63ad84473c0e683a8e148ae/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_81ff1d4cd63ad84473c0e683a8e148ae/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-pthread', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE___UINT128_T=1', '-DINT64X64_USE_128=1', '-DHAVE_SYS_TYPES_H=1', '-DHAVE_SYS_STAT_H=1', '-DHAVE_DIRENT_H=1', '-DHAVE_STDLIB_H=1', '-DHAVE_GETENV=1', '-DHAVE_SIGNAL_H=1', '-DHAVE_PTHREAD_H=1', '-DHAVE_STDINT_H=1', '-DHAVE_INTTYPES_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_71ec7fb178b399c8352f3a2669fea54c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_71ec7fb178b399c8352f3a2669fea54c/testbuild/testprog[0m
 
-['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_81ff1d4cd63ad84473c0e683a8e148ae/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
+['/usr/bin/g++', '-pthread', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_71ec7fb178b399c8352f3a2669fea54c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-lrt']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header sys/ioctl.h
 ==>
 #include <sys/ioctl.h>
@@ -1060,14 +1154,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_3851d7f874cb8fc38126b28e4b7d810c/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_2dfbb2110e3c034891e50324e12328a8/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3851d7f874cb8fc38126b28e4b7d810c/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_3851d7f874cb8fc38126b28e4b7d810c/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_2dfbb2110e3c034891e50324e12328a8/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_2dfbb2110e3c034891e50324e12328a8/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3851d7f874cb8fc38126b28e4b7d810c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_2dfbb2110e3c034891e50324e12328a8/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header net/if.h
 ==>
 #include <net/if.h>
@@ -1078,14 +1172,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_45527f434b77d266f55e3aa9ae64265a/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_3a981ab921b6f98ada79706565d09391/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_45527f434b77d266f55e3aa9ae64265a/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_45527f434b77d266f55e3aa9ae64265a/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3a981ab921b6f98ada79706565d09391/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_3a981ab921b6f98ada79706565d09391/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_45527f434b77d266f55e3aa9ae64265a/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_3a981ab921b6f98ada79706565d09391/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header net/ethernet.h
 ==>
 #include <net/ethernet.h>
@@ -1096,14 +1190,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_ec6eb64a74aa48869f590a08eebb49e0/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_827d4d8f5b2f02ac014511a49a8ef06e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_ec6eb64a74aa48869f590a08eebb49e0/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_ec6eb64a74aa48869f590a08eebb49e0/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_827d4d8f5b2f02ac014511a49a8ef06e/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_827d4d8f5b2f02ac014511a49a8ef06e/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_ec6eb64a74aa48869f590a08eebb49e0/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_827d4d8f5b2f02ac014511a49a8ef06e/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header linux/if_tun.h
 ==>
 #include <linux/if_tun.h>
@@ -1114,14 +1208,14 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_87abf39cf277a4177993d65b1ac19bed/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_17bb12985544bd57d10d2a74b52d9e6c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_87abf39cf277a4177993d65b1ac19bed/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_87abf39cf277a4177993d65b1ac19bed/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_17bb12985544bd57d10d2a74b52d9e6c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_17bb12985544bd57d10d2a74b52d9e6c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_87abf39cf277a4177993d65b1ac19bed/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_17bb12985544bd57d10d2a74b52d9e6c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header netpacket/packet.h
 ==>
 #include <netpacket/packet.h>
@@ -1132,17 +1226,17 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_e6b5b40f0c676d315aab5629beece281/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_f2a013efaedf5328d46da5dd3c97cbe4/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_e6b5b40f0c676d315aab5629beece281/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_e6b5b40f0c676d315aab5629beece281/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f2a013efaedf5328d46da5dd3c97cbe4/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_f2a013efaedf5328d46da5dd3c97cbe4/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_e6b5b40f0c676d315aab5629beece281/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f2a013efaedf5328d46da5dd3c97cbe4/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for NSC location
 not found
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for 'sqlite3'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'sqlite3']
 err: Package sqlite3 was not found in the pkg-config search path.
@@ -1152,7 +1246,7 @@ No package 'sqlite3' found
 
 not found
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/src/stats: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for header linux/if_tun.h
 ==>
 #include <linux/if_tun.h>
@@ -1163,32 +1257,50 @@ int main(int argc, char **argv) {
 }
 
 <==
-[1/2] Compiling [32mbuild/.conf_check_87abf39cf277a4177993d65b1ac19bed/test.cpp[0m
+[1/2] Compiling [32mbuild/.conf_check_17bb12985544bd57d10d2a74b52d9e6c/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_87abf39cf277a4177993d65b1ac19bed/testbuild/test.cpp.1.o']
-[2/2] Linking [33mbuild/.conf_check_87abf39cf277a4177993d65b1ac19bed/testbuild/testprog[0m
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_17bb12985544bd57d10d2a74b52d9e6c/testbuild/test.cpp.1.o']
+[2/2] Linking [33mbuild/.conf_check_17bb12985544bd57d10d2a74b52d9e6c/testbuild/testprog[0m
 
-['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_87abf39cf277a4177993d65b1ac19bed/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
+['/usr/bin/g++', 'test.cpp.1.o', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_17bb12985544bd57d10d2a74b52d9e6c/testbuild/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic']
 yes
+------------------------------------------------------------------
+Checking for python module 'gtk'
+['/usr/bin/python', '-c', "\nimport gtk as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
+out: unknown version
+
+ok
+------------------------------------------------------------------
+Checking for python module 'goocanvas'
+['/usr/bin/python', '-c', "\nimport goocanvas as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
+out: 0.14.1
+
+0.14.1
+------------------------------------------------------------------
+Checking for python module 'pygraphviz'
+['/usr/bin/python', '-c', "\nimport pygraphviz as current_module\nversion = getattr(current_module, '__version__', None)\nif version is not None:\n\tprint(str(version))\nelse:\n\tprint('unknown version')\n"]
+out: 1.3.1
+
+1.3.1
 (tool boost is already loaded, skipping)
-------------------------------------------------------
+------------------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/contrib: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking boost includes
 headers not found, please provide a --boost-includes argument (see help)
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/contrib: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for program 'sudo'
 /usr/bin/sudo
 find program=['sudo'] paths=['/home/arnab/bin', '/home/arnab/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='SUDO' -> ['/usr/bin/sudo']
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for program 'valgrind'
 not found
 find program=['valgrind'] paths=['/home/arnab/bin', '/home/arnab/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='VALGRIND' -> None
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27: Could not find the program ['valgrind']
-------------------------------------------------------
+------------------------------------------------------------------
 Checking for 'gsl'
 ['/usr/bin/pkg-config', '--cflags', '--libs', 'gsl']
 err: Package gsl was not found in the pkg-config search path.
@@ -1198,66 +1310,66 @@ No package 'gsl' found
 
 not found
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27: The configuration failed
-------------------------------------------------------
+------------------------------------------------------------------
 python-config
 not found
 find program=['libgcrypt-config'] paths=['/home/arnab/bin', '/home/arnab/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='LIBGCRYPT_CONFIG' -> None
 from /home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27: Could not find the program ['libgcrypt-config']
-----------------------------------------------------------------
+------------------------------------------------------------------
 Checking for compilation flag -Wno-error=deprecated-d... support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_c40589c24f6c29dfd3401d4103aedc65/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_6ec05647b5db91b33a554631960f784e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_c40589c24f6c29dfd3401d4103aedc65/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6ec05647b5db91b33a554631960f784e/testbuild/test.cpp.1.o']
 ok
-----------------------------------------------------------------
+------------------------------------------------------------------
 Checking for compilation flag -Wno-error=deprecated-d... support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_f73d9de432e29aee01a0c6816d3afc21/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_030a242c9b003f607e1b691d5bfe0673/test.c[0m
 
-['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f73d9de432e29aee01a0c6816d3afc21/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wno-error=deprecated-declarations', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_030a242c9b003f607e1b691d5bfe0673/testbuild/test.c.1.o']
 ok
-----------------------------------------------------------------
+------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_c40589c24f6c29dfd3401d4103aedc65/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_6ec05647b5db91b33a554631960f784e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_c40589c24f6c29dfd3401d4103aedc65/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6ec05647b5db91b33a554631960f784e/testbuild/test.cpp.1.o']
 ok
-----------------------------------------------------------------
+------------------------------------------------------------------
 Checking for compilation flag -fstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_f73d9de432e29aee01a0c6816d3afc21/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_030a242c9b003f607e1b691d5bfe0673/test.c[0m
 
-['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f73d9de432e29aee01a0c6816d3afc21/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-fstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_030a242c9b003f607e1b691d5bfe0673/testbuild/test.c.1.o']
 ok
-----------------------------------------------------------------
+------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_c40589c24f6c29dfd3401d4103aedc65/test.cpp[0m
+[1/1] Compiling [32mbuild/.conf_check_6ec05647b5db91b33a554631960f784e/test.cpp[0m
 
-['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_c40589c24f6c29dfd3401d4103aedc65/testbuild/test.cpp.1.o']
+['/usr/bin/g++', '-O0', '-ggdb', '-g3', '-Wall', '-Werror', '-std=c++11', '-Wno-error=deprecated-declarations', '-fstrict-aliasing', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.cpp', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_6ec05647b5db91b33a554631960f784e/testbuild/test.cpp.1.o']
 ok
-----------------------------------------------------------------
+------------------------------------------------------------------
 Checking for compilation flag -Wstrict-aliasing support
 ==>
 int main() { return 0; }
 <==
-[1/1] Compiling [32mbuild/.conf_check_f73d9de432e29aee01a0c6816d3afc21/test.c[0m
+[1/1] Compiling [32mbuild/.conf_check_030a242c9b003f607e1b691d5bfe0673/test.c[0m
 
-['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_f73d9de432e29aee01a0c6816d3afc21/testbuild/test.c.1.o']
+['/usr/bin/gcc', '-Wstrict-aliasing', '-DNS3_BUILD_PROFILE_DEBUG', '-DNS3_ASSERT_ENABLE', '-DNS3_LOG_ENABLE', '-DHAVE_SYS_IOCTL_H=1', '-DHAVE_IF_NETS_H=1', '-DHAVE_NET_ETHERNET_H=1', '-DHAVE_PACKET_H=1', '-DHAVE_IF_TUN_H=1', '../test.c', '-c', '-o', '/home/arnab/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/ns-3.27/build/.conf_check_030a242c9b003f607e1b691d5bfe0673/testbuild/test.c.1.o']
 ok
-----------------------------------------------------------------
+------------------------------------------------------------------
 Checking for program 'doxygen'
 not found
 find program=['doxygen'] paths=['/home/arnab/bin', '/home/arnab/.local/bin', '/usr/local/sbin', '/usr/local/bin', '/usr/sbin', '/usr/bin', '/sbin', '/bin', '/usr/games', '/usr/local/games', '/snap/bin'] var='DOXYGEN' -> None
