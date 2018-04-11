@@ -1,0 +1,456 @@
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (8.859s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2990368
+ Rx Bytes: 2847232
+  Tx Packets: 5887
+  Rx Packets: 5599
+  DroppedPackets: 247
+  Throughput: 2.53087 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 145604
+ Rx Bytes: 145552
+  Tx Packets: 2800
+  Rx Packets: 2799
+  Throughput: 0.12938 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (10.072s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 3002296
+ Rx Bytes: 2857172
+  Tx Packets: 5911
+  Rx Packets: 5619
+  DroppedPackets: 271
+  Throughput: 2.53971 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 146124
+ Rx Bytes: 146072
+  Tx Packets: 2810
+  Rx Packets: 2809
+  Throughput: 0.129842 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.858s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2986392
+ Rx Bytes: 2842444
+  Tx Packets: 5879
+  Rx Packets: 5589
+  DroppedPackets: 277
+  Throughput: 2.52662 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 145344
+ Rx Bytes: 145292
+  Tx Packets: 2795
+  Rx Packets: 2794
+  Throughput: 0.129148 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.434s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2990368
+ Rx Bytes: 2847232
+  Tx Packets: 5887
+  Rx Packets: 5599
+  DroppedPackets: 247
+  Throughput: 2.53087 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 145604
+ Rx Bytes: 145552
+  Tx Packets: 2800
+  Rx Packets: 2799
+  Throughput: 0.12938 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.727s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 3002296
+ Rx Bytes: 2857172
+  Tx Packets: 5911
+  Rx Packets: 5619
+  DroppedPackets: 271
+  Throughput: 2.53971 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 146124
+ Rx Bytes: 146072
+  Tx Packets: 2810
+  Rx Packets: 2809
+  Throughput: 0.129842 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (12.054s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2986392
+ Rx Bytes: 2842444
+  Tx Packets: 5879
+  Rx Packets: 5589
+  DroppedPackets: 277
+  Throughput: 2.52662 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 145344
+ Rx Bytes: 145292
+  Tx Packets: 2795
+  Rx Packets: 2794
+  Throughput: 0.129148 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.719s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2859160
+ Rx Bytes: 2715212
+  Tx Packets: 5623
+  Rx Packets: 5333
+  DroppedPackets: 495
+  Throughput: 2.41352 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 138688
+ Rx Bytes: 138636
+  Tx Packets: 2667
+  Rx Packets: 2666
+  Throughput: 0.123232 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.794s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2759760
+ Rx Bytes: 2615812
+  Tx Packets: 5423
+  Rx Packets: 5133
+  DroppedPackets: 526
+  Throughput: 2.32517 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 133488
+ Rx Bytes: 133384
+  Tx Packets: 2567
+  Rx Packets: 2565
+  Throughput: 0.118564 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (8.262s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2837292
+ Rx Bytes: 2692756
+  Tx Packets: 5579
+  Rx Packets: 5288
+  DroppedPackets: 487
+  Throughput: 2.39356 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 137492
+ Rx Bytes: 137440
+  Tx Packets: 2644
+  Rx Packets: 2643
+  Throughput: 0.122169 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (12.055s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2859160
+ Rx Bytes: 2715212
+  Tx Packets: 5623
+  Rx Packets: 5333
+  DroppedPackets: 495
+  Throughput: 2.41352 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 138688
+ Rx Bytes: 138636
+  Tx Packets: 2667
+  Rx Packets: 2666
+  Throughput: 0.123232 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (11.326s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2759760
+ Rx Bytes: 2615812
+  Tx Packets: 5423
+  Rx Packets: 5133
+  DroppedPackets: 526
+  Throughput: 2.32517 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 133488
+ Rx Bytes: 133384
+  Tx Packets: 2567
+  Rx Packets: 2565
+  Throughput: 0.118564 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.730s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2837292
+ Rx Bytes: 2692756
+  Tx Packets: 5579
+  Rx Packets: 5288
+  DroppedPackets: 487
+  Throughput: 2.39356 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 137492
+ Rx Bytes: 137440
+  Tx Packets: 2644
+  Rx Packets: 2643
+  Throughput: 0.122169 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.781s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 1952632
+ Rx Bytes: 1808096
+  Tx Packets: 3799
+  Rx Packets: 3508
+  DroppedPackets: 889
+  Throughput: 1.6072 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 91212
+ Rx Bytes: 91160
+  Tx Packets: 1754
+  Rx Packets: 1753
+  Throughput: 0.0810311 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.885s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 728640
+ Rx Bytes: 681012
+  Tx Packets: 1289
+  Rx Packets: 1208
+  DroppedPackets: 391
+  Throughput: 0.605344 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 45608
+ Rx Bytes: 45608
+  Tx Packets: 877
+  Rx Packets: 877
+  Throughput: 0.0405404 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.258s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 2036124
+ Rx Bytes: 1772924
+  Tx Packets: 3683
+  Rx Packets: 3216
+  DroppedPackets: 964
+  Throughput: 1.57593 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 112636
+ Rx Bytes: 112636
+  Tx Packets: 2166
+  Rx Packets: 2166
+  Throughput: 0.100121 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.697s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 1952632
+ Rx Bytes: 1808096
+  Tx Packets: 3799
+  Rx Packets: 3508
+  DroppedPackets: 889
+  Throughput: 1.6072 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 91212
+ Rx Bytes: 91160
+  Tx Packets: 1754
+  Rx Packets: 1753
+  Throughput: 0.0810311 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.602s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 1672520
+ Rx Bytes: 1567352
+  Tx Packets: 2880
+  Rx Packets: 2694
+  DroppedPackets: 837
+  Throughput: 1.3932 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 90528
+ Rx Bytes: 90528
+  Tx Packets: 1585
+  Rx Packets: 1585
+  Throughput: 0.0804693 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.257s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 1903240
+ Rx Bytes: 1807732
+  Tx Packets: 3442
+  Rx Packets: 3274
+  DroppedPackets: 914
+  Throughput: 1.60687 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 108216
+ Rx Bytes: 108216
+  Tx Packets: 1917
+  Rx Packets: 1917
+  Throughput: 0.096192 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.792s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 198264
+ Rx Bytes: 181212
+  Tx Packets: 339
+  Rx Packets: 310
+  DroppedPackets: 374
+  Throughput: 0.161077 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 11964
+ Rx Bytes: 11964
+  Tx Packets: 230
+  Rx Packets: 230
+  Throughput: 0.0106347 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.558s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 200616
+ Rx Bytes: 176508
+  Tx Packets: 343
+  Rx Packets: 302
+  DroppedPackets: 366
+  Throughput: 0.156896 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 11548
+ Rx Bytes: 11548
+  Tx Packets: 222
+  Rx Packets: 222
+  Throughput: 0.0102649 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.216s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 194148
+ Rx Bytes: 174156
+  Tx Packets: 332
+  Rx Packets: 298
+  DroppedPackets: 342
+  Throughput: 0.154805 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 11548
+ Rx Bytes: 11548
+  Tx Packets: 222
+  Rx Packets: 222
+  Throughput: 0.0102649 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.514s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 440520
+ Rx Bytes: 415236
+  Tx Packets: 751
+  Rx Packets: 708
+  DroppedPackets: 783
+  Throughput: 0.369099 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 27456
+ Rx Bytes: 27156
+  Tx Packets: 467
+  Rx Packets: 462
+  Throughput: 0.0241387 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.558s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 506964
+ Rx Bytes: 458160
+  Tx Packets: 864
+  Rx Packets: 781
+  DroppedPackets: 833
+  Throughput: 0.407253 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 28076
+ Rx Bytes: 28076
+  Tx Packets: 472
+  Rx Packets: 472
+  Throughput: 0.0249564 Mbps
+
+
+Waf: Entering directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Waf: Leaving directory `/home/arnab/NS3/ns-3-allinone/ns-3-dev/build'
+Build commands will be stored in build/compile_commands.json
+'build' finished successfully (9.818s)
+Flow1(10.1.1.2->10.1.3.1)
+ Tx Bytes: 493440
+ Rx Bytes: 456984
+  Tx Packets: 841
+  Rx Packets: 779
+  DroppedPackets: 741
+  Throughput: 0.406208 Mbps
+Flow2(10.1.3.1->10.1.1.2)
+ Tx Bytes: 26380
+ Rx Bytes: 26380
+  Tx Packets: 456
+  Rx Packets: 456
+  Throughput: 0.0234489 Mbps
+
+

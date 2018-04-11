@@ -63,12 +63,14 @@ main (int argc, char *argv[])
   uint32_t nWifi = 1;
   bool tracing = false;
   bool en_sack = true;
+  double edt = 35.0;
 
   CommandLine cmd;
   //cmd.AddValue ("nCsma", "Number of \"extra\" CSMA nodes/devices", nCsma);
   cmd.AddValue ("nWifi", "Number of wifi STA devices", nWifi);
   cmd.AddValue ("tracing", "Enable pcap tracing", tracing);
   cmd.AddValue ("sack", "Enable Selective ACKnowledgements", en_sack);
+  cmd.AddValue ("edt", "ns3::YansWifiPhy::EnergyDetectionThresholdThreshold energy of a received signal", edt);
 
   cmd.Parse (argc,argv);
 
@@ -114,7 +116,7 @@ main (int argc, char *argv[])
   phyAP.Set ("TxPowerLevels", UintegerValue (1));
   phyST.Set ("RxNoiseFigure", DoubleValue(30.0));
   phyST.Set ("CcaMode1Threshold", DoubleValue (30.0));
-  phyST.Set ("EnergyDetectionThreshold", DoubleValue (55.0));
+  phyST.Set ("EnergyDetectionThreshold", DoubleValue (edt));
   phyAP.SetErrorRateModel ("ns3::YansErrorRateModel");
   phyST.SetErrorRateModel ("ns3::YansErrorRateModel");
 
@@ -241,6 +243,8 @@ main (int argc, char *argv[])
   }
  
   //std::cout << "  DroppedPackets1: " << (dropped1) << "\n";
+
+  std::cout << "\n\n";
 
   if (tracing == true)
     {
