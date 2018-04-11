@@ -9,5 +9,19 @@ TCP uses a cumulative acknowledgment scheme in which received segments that are 
 With selective acknowledgments, the data receiver can inform the sender about all segments that have arrived successfully, so the sender need retransmit only the segments that have actually been lost.<br/>
 The example of TCP-SACK is  [Click Here](https://github.com/palarnab23/Exhaustive-evaluation-of-TCP-Selective-Acknowledgments-in-WiFi-environments/wiki/Example-of-TCP-SACK)
 
+#### Use the following steps to execute
+
+1.) Configure and build the repository using the following commands:
+ - './waf configure
+ - './waf'
+
+2.) Go to ns-3.27 directory
+ - 'cd ns-3.27'
+
+3.) Run the shell script
+ - './eesrun.sh'
+
+#####Output file will be available in file outp.txt
+
 ### References
 1. TCP Selective Acknowledgment Options   RFC 2018  https://tools.ietf.org/html/rfc2018 
